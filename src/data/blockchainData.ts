@@ -11,7 +11,7 @@ export const blockchainData: BlockData[] = [
   {
     id: 'genesis',
     blockNumber: 0,
-    timestamp: '1995-03-15T00:00:00Z',
+    timestamp: '1999-08-24T00:00:00Z',
     title: 'Genesis Block',
     subtitle: 'The Origin Story',
     description: 'Every blockchain starts with a genesis block. This is where the journey began.',
