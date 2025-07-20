@@ -6,6 +6,7 @@ import { TimelineConnector } from './TimelineConnector';
 import { BlockModal } from './BlockModal';
 import { TransactionGame } from './TransactionGame';
 import { TransactionFeedback } from './TransactionFeedback';
+import { Monitor, Smartphone } from 'lucide-react';
 
 export const BlockchainTimeline: React.FC = () => {
   const [activeBlock, setActiveBlock] = useState(0);
@@ -140,6 +141,8 @@ export const BlockchainTimeline: React.FC = () => {
     setTimeout(() => setFraudulentTransaction(null), 100);
   };
 
+  const isMobile = window.innerWidth < 768;
+
   return (
     <div className="relative">
       {/* Transaction Game - Hidden on mobile */}
@@ -156,8 +159,8 @@ export const BlockchainTimeline: React.FC = () => {
         />
       </div>
 
-      {/* Timeline Navigation */}
-      <div className="fixed top-4 right-2 md:right-4 z-50 flex flex-col space-y-1 md:space-y-2">
+      {/* Timeline Navigation - Hidden on mobile */}
+      <div className="hidden md:flex fixed top-4 right-2 md:right-4 z-50 flex-col space-y-1 md:space-y-2">
         {blockchainData.map((block, index) => (
           <button
             key={block.id}
@@ -178,55 +181,82 @@ export const BlockchainTimeline: React.FC = () => {
         ))}
       </div>
 
-      {/* Main Timeline */}
-      <div 
-        ref={timelineRef} 
-        className="relative px-4 md:px-8"
-        style={{ 
-          height: `${blockchainData.length * 100}vh`,
-          overflow: window.innerWidth < 768 ? 'hidden' : 'visible'
-        }}
-      >
-        {blockchainData.map((block, index) => (
-            <div
-              key={block.id}
-              ref={(el) => blockRefs.current[index] = el}
-              className="min-h-screen flex items-center justify-center relative"
-              style={{ 
-                transform: window.innerWidth < 768 
-                  ? `translateY(${(index - activeBlock) * 100}vh)`
-                  : `translateZ(${(index - activeBlock) * 50}px)`,
-                opacity: window.innerWidth < 768 
-                  ? (activeBlock === index ? 1 : 0)
-                  : (Math.abs(index - activeBlock) > 2 ? 0.3 : 1),
-                position: window.innerWidth < 768 ? 'absolute' : 'relative',
-                top: window.innerWidth < 768 ? 0 : 'auto',
-                left: window.innerWidth < 768 ? 0 : 'auto',
-                right: window.innerWidth < 768 ? 0 : 'auto',
-                width: window.innerWidth < 768 ? '100%' : 'auto',
-                transition: window.innerWidth < 768 ? 'transform 1.0s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.6s ease-out' : 'none'
-              }}
-          >
-            {/* Timeline Connector - Hidden on mobile */}
-            {index < blockchainData.length - 1 && window.innerWidth >= 768 && (
-              <TimelineConnector
-                startBlock={block}
-                endBlock={blockchainData[index + 1]}
-                isActive={activeBlock >= index}
-              />
-            )}
-
-            {/* Block Component */}
+      {/* Mobile View - Show only first block with desktop recommendation */}
+      {isMobile ? (
+        <div className="min-h-screen flex flex-col items-center justify-center px-4">
+          {/* First Block */}
+          <div className="w-full max-w-sm mb-8">
             <BlockComponent
-              block={block}
-              isActive={activeBlock === index}
-              isPrevious={activeBlock > index}
-              isNext={activeBlock < index}
-              onClick={() => handleBlockClick(block.id)}
-              style={{
-                transform: window.innerWidth < 768 
-                  ? 'none'
-                  : `
+              block={blockchainData[0]}
+              isActive={true}
+              isPrevious={false}
+              isNext={false}
+              onClick={() => handleBlockClick(blockchainData[0].id)}
+            />
+          </div>
+
+          {/* Desktop Recommendation */}
+          <div className="bg-card/80 backdrop-blur-sm border border-border rounded-lg p-6 max-w-sm text-center">
+            <div className="flex items-center justify-center space-x-3 mb-4">
+              <Monitor className="w-8 h-8 text-primary" />
+              <Smartphone className="w-6 h-6 text-muted-foreground" />
+            </div>
+            <h3 className="text-lg font-cyber text-primary mb-2">
+              Experience the Full Blockchain Journey
+            </h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              This interactive blockchain timeline is optimized for desktop viewing. 
+              Switch to a larger screen to explore the complete blockchain journey 
+              with 3D animations and interactive elements.
+            </p>
+            <div className="text-xs text-muted-foreground">
+              <p>• 3D Block Transitions</p>
+              <p>• Interactive Timeline</p>
+              <p>• Transaction Game</p>
+              <p>• Full Blockchain Experience</p>
+            </div>
+          </div>
+        </div>
+      ) : (
+        /* Desktop View - Full timeline experience */
+        <div 
+          ref={timelineRef} 
+          className="relative px-4 md:px-8"
+          style={{ 
+            height: `${blockchainData.length * 100}vh`,
+            overflow: 'visible'
+          }}
+        >
+          {blockchainData.map((block, index) => (
+              <div
+                key={block.id}
+                ref={(el) => blockRefs.current[index] = el}
+                className="min-h-screen flex items-center justify-center relative"
+                style={{ 
+                  transform: `translateZ(${(index - activeBlock) * 50}px)`,
+                  opacity: (Math.abs(index - activeBlock) > 2 ? 0.3 : 1),
+                  position: 'relative',
+                  transition: 'none'
+                }}
+            >
+              {/* Timeline Connector */}
+              {index < blockchainData.length - 1 && (
+                <TimelineConnector
+                  startBlock={block}
+                  endBlock={blockchainData[index + 1]}
+                  isActive={activeBlock >= index}
+                />
+              )}
+
+              {/* Block Component */}
+              <BlockComponent
+                block={block}
+                isActive={activeBlock === index}
+                isPrevious={activeBlock > index}
+                isNext={activeBlock < index}
+                onClick={() => handleBlockClick(block.id)}
+                style={{
+                  transform: `
                     perspective(1000px)
                     rotateX(${(index - activeBlock) * 10}deg)
                     rotateY(${(index - activeBlock) * 5}deg)
@@ -235,11 +265,12 @@ export const BlockchainTimeline: React.FC = () => {
                     translateZ(${block.position.z + (index - activeBlock) * 100}px)
                     scale(${activeBlock === index ? 1 : 0.8})
                   `
-              }}
-            />
-          </div>
-        ))}
-      </div>
+                }}
+              />
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Block Details Modal */}
       {expandedBlock && (
@@ -249,8 +280,8 @@ export const BlockchainTimeline: React.FC = () => {
         />
       )}
 
-      {/* Current Block Info */}
-      <div className="fixed bottom-4 left-2 md:left-4 z-40 bg-card/80 backdrop-blur-sm border border-border rounded-lg p-2 md:p-4 max-w-[200px] md:max-w-sm">
+      {/* Current Block Info - Hidden on mobile */}
+      <div className="hidden md:block fixed bottom-4 left-2 md:left-4 z-40 bg-card/80 backdrop-blur-sm border border-border rounded-lg p-2 md:p-4 max-w-[200px] md:max-w-sm">
         <div className="text-xs md:text-sm text-muted-foreground font-mono">
           Block #{blockchainData[activeBlock]?.blockNumber}
         </div>
