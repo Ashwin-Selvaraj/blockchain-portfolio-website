@@ -11,49 +11,177 @@ export const blockchainData: BlockData[] = [
   {
     id: 'genesis',
     blockNumber: 0,
-    timestamp: '1995-03-15T00:00:00Z',
+    timestamp: '1999-08-24T00:00:00Z',
     title: 'Genesis Block',
     subtitle: 'The Origin Story',
     description: 'Every blockchain starts with a genesis block. This is where the journey began.',
     details: {
-      content: `Born into the digital age, with an innate curiosity for how systems work and connect. The foundation block that would eventually lead to a passion for decentralized technologies and blockchain innovation.
-
-Growing up during the early internet era, witnessing the transformation from dial-up connections to broadband, from static websites to dynamic applications. This early exposure to technological evolution sparked a deep interest in understanding the underlying protocols and systems that power our digital world.`,
+      content: `My blockchain journey began in 2019 through crypto trading, with Ethereum as the entry point. What started with charts soon turned into a deeper interest in smart contracts and decentralized systems. That curiosity grew into a passion for building — leading me to develop smart contracts and contribute to web3 projects ever since.`,
       achievements: [
-        'First computer at age 8',
-        'Built first website at 12',
-        'Started programming in BASIC and HTML',
-        'Early adopter of internet technologies'
+        'Discovered Ethereum in 2019',
+        'Started with crypto trading and on-chain exploration',
+        'Transitioned from trader to blockchain developer',
+        'Built and deployed smart contracts across EVM chains'
       ],
       photos: [
         {
-          id: 'childhood-computer',
-          url: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop',
-          title: 'First Computer Setup',
+          id: 'photo-1',
+          url: '/photos/photo1.jpg',
+          title: 'Photo 1',
           metadata: {
             hash: '0xa1b2c3d4e5f6789012345678901234567890abcdef',
-            capturedOn: '1995-03-15',
+            capturedOn: '2024-01-15',
             blockRef: 'genesis-0x001'
           }
         },
         {
-          id: 'early-programming',
-          url: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop',
-          title: 'Learning to Code',
+          id: 'photo-2',
+          url: '/photos/photo2.jpg',
+          title: 'Photo 2',
           metadata: {
             hash: '0xf6e5d4c3b2a1098765432109876543210fedcba',
-            capturedOn: '1999-08-22',
+            capturedOn: '2024-01-16',
             blockRef: 'genesis-0x002'
           }
         },
         {
-          id: 'first-website',
-          url: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=600&fit=crop',
-          title: 'Building First Website',
+          id: 'photo-3',
+          url: '/photos/photo3.jpeg',
+          title: 'Photo 3',
           metadata: {
             hash: '0x123456789abcdef0123456789abcdef012345678',
-            capturedOn: '2003-12-10',
+            capturedOn: '2024-01-17',
             blockRef: 'genesis-0x003'
+          }
+        },
+        {
+          id: 'photo-4',
+          url: '/photos/photo4.png',
+          title: 'Photo 4',
+          metadata: {
+            hash: '0x456789abcdef123456789abcdef123456789abc',
+            capturedOn: '2024-01-18',
+            blockRef: 'genesis-0x004'
+          }
+        },
+        {
+          id: 'photo-5',
+          url: '/photos/photo5.jpeg',
+          title: 'Photo 5',
+          metadata: {
+            hash: '0x789abcdef123456789abcdef123456789abcdef',
+            capturedOn: '2024-01-19',
+            blockRef: 'genesis-0x005'
+          }
+        },
+        {
+          id: 'photo-6',
+          url: '/photos/photo6.jpeg',
+          title: 'Photo 6',
+          metadata: {
+            hash: '0xabcdef123456789abcdef123456789abcdef12',
+            capturedOn: '2024-01-20',
+            blockRef: 'genesis-0x006'
+          }
+        },
+        {
+          id: 'photo-7',
+          url: '/photos/photo7.jpeg',
+          title: 'Photo 7',
+          metadata: {
+            hash: '0xdef123456789abcdef123456789abcdef12345',
+            capturedOn: '2024-01-21',
+            blockRef: 'genesis-0x007'
+          }
+        },
+        {
+          id: 'photo-8',
+          url: '/photos/photo8.jpeg',
+          title: 'Photo 8',
+          metadata: {
+            hash: '0xf123456789abcdef123456789abcdef1234567',
+            capturedOn: '2024-01-22',
+            blockRef: 'genesis-0x008'
+          }
+        },
+        {
+          id: 'photo-9',
+          url: '/photos/photo9.jpeg',
+          title: 'Photo 9',
+          metadata: {
+            hash: '0x23456789abcdef123456789abcdef123456789',
+            capturedOn: '2024-01-23',
+            blockRef: 'genesis-0x009'
+          }
+        },
+        {
+          id: 'photo-10',
+          url: '/photos/photo10.jpeg',
+          title: 'Photo 10',
+          metadata: {
+            hash: '0x56789abcdef123456789abcdef123456789abc',
+            capturedOn: '2024-01-24',
+            blockRef: 'genesis-0x010'
+          }
+        },
+        {
+          id: 'photo-11',
+          url: '/photos/photo11.jpeg',
+          title: 'Photo 11',
+          metadata: {
+            hash: '0x89abcdef123456789abcdef123456789abcdef',
+            capturedOn: '2024-01-25',
+            blockRef: 'genesis-0x011'
+          }
+        },
+        {
+          id: 'photo-12',
+          url: '/photos/photo12.jpeg',
+          title: 'Photo 12',
+          metadata: {
+            hash: '0xbcdef123456789abcdef123456789abcdef123',
+            capturedOn: '2024-01-26',
+            blockRef: 'genesis-0x012'
+          }
+        },
+        {
+          id: 'photo-13',
+          url: '/photos/photo13.jpeg',
+          title: 'Photo 13',
+          metadata: {
+            hash: '0xef123456789abcdef123456789abcdef123456',
+            capturedOn: '2024-01-27',
+            blockRef: 'genesis-0x013'
+          }
+        },
+        {
+          id: 'photo-14',
+          url: '/photos/photo14.jpeg',
+          title: 'Photo 14',
+          metadata: {
+            hash: '0x123456789abcdef123456789abcdef12345678',
+            capturedOn: '2024-01-28',
+            blockRef: 'genesis-0x014'
+          }
+        },
+        {
+          id: 'photo-15',
+          url: '/photos/photo15.jpeg',
+          title: 'Photo 15',
+          metadata: {
+            hash: '0x456789abcdef123456789abcdef123456789ab',
+            capturedOn: '2024-01-29',
+            blockRef: 'genesis-0x015'
+          }
+        },
+        {
+          id: 'photo-16',
+          url: '/photos/photo16.jpeg',
+          title: 'Photo 16',
+          metadata: {
+            hash: '0x789abcdef123456789abcdef123456789abcde',
+            capturedOn: '2024-01-30',
+            blockRef: 'genesis-0x016'
           }
         }
       ]
@@ -66,20 +194,20 @@ Growing up during the early internet era, witnessing the transformation from dia
   {
     id: 'education-foundation',
     blockNumber: 1,
-    timestamp: '2013-09-01T00:00:00Z',
+    timestamp: '2017-08-01T00:00:00Z',
     title: 'Education Foundation',
-    subtitle: 'Building the Knowledge Base',
-    description: 'Academic foundation in computer science and mathematics.',
+    subtitle: 'Engineering the Future',
+    description: 'Bachelor of Engineering – where theory met curiosity.',
     details: {
-      content: `Pursued formal education in Computer Science with a focus on mathematics, algorithms, and system design. This period was crucial for building the theoretical foundation that would later prove invaluable in understanding blockchain consensus mechanisms, cryptographic principles, and distributed systems.
+      content: `Completed formal education in Engineering at Kongu Engineering College, where I built a strong foundation in mathematics, programming, and system design. This phase laid the groundwork for my transition into blockchain development, as I deepened my understanding of algorithms, distributed systems, and cryptography.
 
-Specialized coursework included discrete mathematics, data structures, algorithms, computer networks, and database systems. Participated in programming competitions and hackathons, developing problem-solving skills and learning to work under pressure.`,
-      technologies: ['C++', 'Java', 'Python', 'SQL', 'Assembly', 'MATLAB'],
+    Throughout my academic journey, I actively participated in programming contests and honed practical skills through real-world projects and hackathons. My passion for decentralized technology grew during this time, ultimately shaping my career in web3.`,
+      technologies: ['C', 'Java', 'Solidity', 'JavaScript', 'SQL'],
       achievements: [
-        'Dean\'s List for 3 consecutive semesters',
-        'Winner of university programming contest',
-        'Published research paper on distributed algorithms',
-        'Teaching assistant for Data Structures course'
+        'Graduated with a CGPA of 8.43/10.0',
+        'Built early-stage technical projects in web and blockchain',
+        'Actively participated in hackathons and won prizes in tech events',
+        'Completed blockchain certifications from iNeuron and Coursera'
       ]
     },
     hash: generateHash('education'),
@@ -88,35 +216,8 @@ Specialized coursework included discrete mathematics, data structures, algorithm
     position: { x: 200, y: -100, z: 50 }
   },
   {
-    id: 'degree-graduation',
-    blockNumber: 2,
-    timestamp: '2017-05-15T00:00:00Z',
-    title: 'Bachelor\'s Degree',
-    subtitle: 'Computer Science Graduate',
-    description: 'Graduated with honors, specializing in distributed systems and cryptography.',
-    details: {
-      content: `Completed Bachelor's degree in Computer Science with magna cum laude honors. Senior thesis focused on "Consensus Algorithms in Distributed Networks" - a prescient topic that would become central to blockchain technology.
-
-During the final year, became fascinated with Bitcoin's whitepaper and began exploring the intersection of cryptography, game theory, and distributed systems. This marked the beginning of the blockchain journey.`,
-      technologies: ['Cryptography', 'Distributed Systems', 'Network Security', 'Game Theory'],
-      achievements: [
-        'Graduated Magna Cum Laude (GPA: 3.8/4.0)',
-        'Thesis: "Consensus Algorithms in Distributed Networks"',
-        'President of Computer Science Student Association',
-        'Internship at tech startup working on P2P networks'
-      ],
-      links: [
-        { label: 'Thesis Paper', url: '#', type: 'website' }
-      ]
-    },
-    hash: generateHash('degree'),
-    previousHash: generateHash('education'),
-    nonce: 2048,
-    position: { x: -150, y: 100, z: -30 }
-  },
-  {
     id: 'blockchain-entry',
-    blockNumber: 3,
+    blockNumber: 1,
     timestamp: '2018-01-10T00:00:00Z',
     title: 'Blockchain Entry',
     subtitle: 'First Smart Contract',
@@ -155,13 +256,13 @@ contract MyToken {
       ]
     },
     hash: generateHash('blockchain-entry'),
-    previousHash: generateHash('degree'),
+    previousHash: generateHash('education'),
     nonce: 4096,
     position: { x: 300, y: 50, z: 100 }
   },
   {
     id: 'evm-chains',
-    blockNumber: 4,
+    blockNumber: 2,
     timestamp: '2020-03-20T00:00:00Z',
     title: 'EVM Mastery',
     subtitle: 'Multi-Chain Development',
@@ -193,7 +294,7 @@ Worked on projects across multiple chains, learning the nuances of each - Polygo
   },
   {
     id: 'solana-ton',
-    blockNumber: 5,
+    blockNumber: 3,
     timestamp: '2021-11-08T00:00:00Z',
     title: 'Beyond EVM',
     subtitle: 'Solana & TON Development',
@@ -238,7 +339,7 @@ pub mod my_solana_program {
   },
   {
     id: 'major-projects',
-    blockNumber: 6,
+    blockNumber: 4,
     timestamp: '2022-07-15T00:00:00Z',
     title: 'Major Projects',
     subtitle: 'DeFi, NFTs & GameFi',
@@ -248,94 +349,59 @@ pub mod my_solana_program {
 
 Each project brought unique challenges: DeFi required deep understanding of financial primitives and MEV protection, NFTs demanded efficient metadata handling and royalty systems, while GameFi combined the complexity of both with real-time gaming mechanics.`,
       technologies: [
-        'Advanced Solidity Patterns', 'Diamond Standard (EIP-2535)', 'Merkle Trees',
-        'Layer 2 Solutions', 'MEV Protection', 'Flash Loans', 'Yield Farming',
-        'ERC-721', 'ERC-1155', 'IPFS', 'Ceramic Network', 'Chainlink VRF'
+        'DeFi Protocols', 'NFT Marketplaces', 'GameFi Platforms', 'MEV Protection',
+        'Royalty Systems', 'Real-time Gaming', 'Cross-chain Integration'
       ],
       achievements: [
-        'DeFi protocol with $50M+ TVL at peak',
-        'NFT marketplace processing 100K+ trades',
-        'GameFi platform with 50K+ daily active users',
-        'Implemented gas optimizations saving users $2M+ in fees',
-        'Zero critical security vulnerabilities across all projects'
+        'Built DeFi protocol with $50M+ TVL',
+        'Developed NFT marketplace with 100K+ users',
+        'Created GameFi platform with 10K+ daily active users',
+        'Implemented MEV protection saving users $2M+',
+        'Led team of 15+ developers across 3 continents'
       ],
       links: [
-        { label: 'DeFi Protocol', url: '#', type: 'github' },
-        { label: 'NFT Marketplace', url: '#', type: 'demo' },
-        { label: 'GameFi Platform', url: '#', type: 'website' }
+        { label: 'DeFi Protocol', url: '#', type: 'demo' },
+        { label: 'NFT Marketplace', url: '#', type: 'github' },
+        { label: 'GameFi Platform', url: '#', type: 'demo' }
       ]
     },
     hash: generateHash('major-projects'),
     previousHash: generateHash('solana-ton'),
     nonce: 32768,
-    position: { x: -100, y: -120, z: 150 }
+    position: { x: 250, y: -100, z: 120 }
   },
   {
-    id: 'open-source',
-    blockNumber: 7,
-    timestamp: '2023-04-22T00:00:00Z',
-    title: 'Open Source',
-    subtitle: 'Community Contributions',
-    description: 'Active contributor to blockchain open source projects and community initiatives.',
+    id: 'current-focus',
+    blockNumber: 5,
+    timestamp: '2024-01-01T00:00:00Z',
+    title: 'Current Focus',
+    subtitle: 'Innovation & Leadership',
+    description: 'Leading blockchain innovation and mentoring the next generation of developers.',
     details: {
-      content: `Giving back to the community that enabled the learning journey. Contributing to major open source projects, maintaining popular libraries, and mentoring new developers entering the blockchain space.
+      content: `Currently focused on pushing the boundaries of what's possible in blockchain technology. Working on cutting-edge projects that combine multiple blockchain paradigms and exploring new consensus mechanisms.
 
-Open source work includes security improvements to popular DeFi protocols, gas optimization libraries, and educational resources for developers transitioning from Web2 to Web3.`,
+Mentoring junior developers and contributing to open-source projects. Passionate about making blockchain technology more accessible and building the infrastructure for the next generation of decentralized applications.`,
       technologies: [
-        'GitHub Actions', 'Continuous Integration', 'Security Auditing',
-        'Documentation', 'Code Review', 'Mentorship Programs'
+        'Zero-Knowledge Proofs', 'Layer 2 Solutions', 'Cross-chain Protocols',
+        'Decentralized Identity', 'AI Integration', 'Quantum-resistant Cryptography'
       ],
       achievements: [
-        '500+ GitHub contributions in 2023',
-        'Maintainer of popular Solidity library (10K+ stars)',
-        'Published security research on flash loan attacks',
-        'Mentored 50+ developers through Web3 bootcamp',
-        'Core contributor to 3 major DeFi protocols'
+        'Published 3 research papers on blockchain scalability',
+        'Mentored 50+ developers in blockchain development',
+        'Contributed to 20+ open-source blockchain projects',
+        'Speaker at 10+ international blockchain conferences',
+        'Advisor to 5 blockchain startups'
       ],
       links: [
-        { label: 'GitHub Profile', url: 'https://github.com', type: 'github' },
-        { label: 'Security Research', url: '#', type: 'website' },
-        { label: 'Solidity Library', url: '#', type: 'github' }
+        { label: 'Research Papers', url: '#', type: 'website' },
+        { label: 'Open Source Contributions', url: '#', type: 'github' },
+        { label: 'Conference Talks', url: '#', type: 'linkedin' }
       ]
     },
-    hash: generateHash('open-source'),
+    hash: generateHash('current-focus'),
     previousHash: generateHash('major-projects'),
     nonce: 65536,
-    position: { x: 250, y: 0, z: -100 }
-  },
-  {
-    id: 'contact',
-    blockNumber: 8,
-    timestamp: '2024-01-01T00:00:00Z',
-    title: 'Let\'s Connect',
-    subtitle: 'Available for Collaboration',
-    description: 'Ready for the next blockchain challenge. Let\'s build the future together.',
-    details: {
-      content: `The blockchain space is constantly evolving, and I'm excited to be part of that evolution. Whether you're building the next DeFi protocol, exploring NFT utilities, or pushing the boundaries of what's possible with smart contracts, I'd love to collaborate.
-
-I'm particularly interested in projects that combine technical innovation with real-world impact. If you're working on something that could change how we interact with money, governance, or digital ownership, let's talk.`,
-      technologies: [
-        'Full-Stack Blockchain Development', 'Smart Contract Architecture',
-        'DeFi Protocol Design', 'Cross-Chain Solutions', 'Security Auditing',
-        'Team Leadership', 'Technical Strategy', 'Product Development'
-      ],
-      achievements: [
-        'Available for full-time positions',
-        'Open to consulting opportunities',
-        'Interested in co-founding innovative projects',
-        'Speaking engagements at conferences'
-      ],
-      links: [
-        { label: 'Email', url: 'mailto:dev@0xdeveloper.eth', type: 'email' },
-        { label: 'LinkedIn', url: 'https://linkedin.com', type: 'linkedin' },
-        { label: 'GitHub', url: 'https://github.com', type: 'github' },
-        { label: 'Download Resume', url: '#', type: 'website' }
-      ]
-    },
-    hash: generateHash('contact'),
-    previousHash: generateHash('open-source'),
-    nonce: 131072,
-    position: { x: 0, y: 100, z: 200 }
+    position: { x: -300, y: 200, z: -80 }
   }
 ];
 

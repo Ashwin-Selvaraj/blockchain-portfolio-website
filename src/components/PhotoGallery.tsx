@@ -91,11 +91,11 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({ photos }) => {
           </div>
           
           <div className="flex items-center space-x-2 text-muted-foreground">
-            <Calendar className="w-3 h-3 text-primary" />
-            <span className="text-muted-foreground">Captured on:</span>
-            <span className="font-mono">
+            {/* <Calendar className="w-3 h-3 text-primary" /> */}
+            {/* <span className="text-muted-foreground">Captured on:</span> */}
+            {/* <span className="font-mono">
               {photos[currentIndex].metadata.capturedOn}
-            </span>
+            </span> */}
           </div>
           
           <div className="flex items-center space-x-2 text-muted-foreground">
