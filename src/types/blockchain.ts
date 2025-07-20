@@ -1,3 +1,14 @@
+export interface PhotoData {
+  id: string;
+  url: string;
+  title: string;
+  metadata: {
+    hash: string;
+    capturedOn: string;
+    blockRef: string;
+  };
+}
+
 export interface BlockData {
   id: string;
   blockNumber: number;
@@ -15,6 +26,7 @@ export interface BlockData {
     }>;
     achievements?: string[];
     codeSnippet?: string;
+    photos?: PhotoData[];
   };
   hash: string;
   previousHash: string;

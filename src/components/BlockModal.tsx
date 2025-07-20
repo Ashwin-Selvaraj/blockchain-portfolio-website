@@ -2,6 +2,7 @@ import React from 'react';
 import { BlockData } from '@/types/blockchain';
 import { X, ExternalLink, Github, Mail, Linkedin, Globe, Calendar, Hash, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { PhotoGallery } from '@/components/PhotoGallery';
 
 interface BlockModalProps {
   block: BlockData;
@@ -92,11 +93,38 @@ export const BlockModal: React.FC<BlockModalProps> = ({ block, onClose }) => {
             </div>
           </div>
 
-          {/* Main Content */}
-          <div className="prose prose-invert max-w-none">
-            <div className="text-foreground leading-relaxed whitespace-pre-line">
-              {block.details.content}
+          {/* Main Content with Photo Gallery Layout */}
+          <div className={`${block.id === 'genesis' && block.details.photos ? 'grid grid-cols-1 lg:grid-cols-2 gap-8' : ''}`}>
+            {/* Biography and Content */}
+            <div className="space-y-6">
+              <div className="prose prose-invert max-w-none">
+                <div className="text-foreground leading-relaxed whitespace-pre-line">
+                  {block.details.content}
+                </div>
+              </div>
+
+              {/* Achievements */}
+              {block.details.achievements && (
+                <div>
+                  <h3 className="text-lg font-cyber text-primary mb-3">Key Achievements</h3>
+                  <ul className="space-y-2">
+                    {block.details.achievements.map((achievement, index) => (
+                      <li key={index} className="flex items-start space-x-2">
+                        <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                        <span className="text-foreground">{achievement}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
+
+            {/* Photo Gallery - Only for Genesis Block */}
+            {block.id === 'genesis' && block.details.photos && (
+              <div className="lg:sticky lg:top-6 h-fit">
+                <PhotoGallery photos={block.details.photos} />
+              </div>
+            )}
           </div>
 
           {/* Technologies */}
@@ -113,21 +141,6 @@ export const BlockModal: React.FC<BlockModalProps> = ({ block, onClose }) => {
                   </span>
                 ))}
               </div>
-            </div>
-          )}
-
-          {/* Achievements */}
-          {block.details.achievements && (
-            <div>
-              <h3 className="text-lg font-cyber text-primary mb-3">Key Achievements</h3>
-              <ul className="space-y-2">
-                {block.details.achievements.map((achievement, index) => (
-                  <li key={index} className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
-                    <span className="text-foreground">{achievement}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           )}
 

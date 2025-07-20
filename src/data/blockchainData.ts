@@ -11,7 +11,7 @@ export const blockchainData: BlockData[] = [
   {
     id: 'genesis',
     blockNumber: 0,
-    timestamp: '1999-08-24T00:00:00Z',
+    timestamp: '1995-03-15T00:00:00Z',
     title: 'Genesis Block',
     subtitle: 'The Origin Story',
     description: 'Every blockchain starts with a genesis block. This is where the journey began.',
@@ -24,6 +24,38 @@ Growing up during the early internet era, witnessing the transformation from dia
         'Built first website at 12',
         'Started programming in BASIC and HTML',
         'Early adopter of internet technologies'
+      ],
+      photos: [
+        {
+          id: 'childhood-computer',
+          url: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop',
+          title: 'First Computer Setup',
+          metadata: {
+            hash: '0xa1b2c3d4e5f6789012345678901234567890abcdef',
+            capturedOn: '1995-03-15',
+            blockRef: 'genesis-0x001'
+          }
+        },
+        {
+          id: 'early-programming',
+          url: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop',
+          title: 'Learning to Code',
+          metadata: {
+            hash: '0xf6e5d4c3b2a1098765432109876543210fedcba',
+            capturedOn: '1999-08-22',
+            blockRef: 'genesis-0x002'
+          }
+        },
+        {
+          id: 'first-website',
+          url: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=600&fit=crop',
+          title: 'Building First Website',
+          metadata: {
+            hash: '0x123456789abcdef0123456789abcdef012345678',
+            capturedOn: '2003-12-10',
+            blockRef: 'genesis-0x003'
+          }
+        }
       ]
     },
     hash: generateHash('genesis'),

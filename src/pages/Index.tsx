@@ -29,10 +29,10 @@ const Index = () => {
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4 md:px-6">
           <div className="mb-6 md:mb-8">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-cyber font-black text-primary neon-glow mb-2 md:mb-4">
-              0xDeveloper
+              0xAshwin
             </h1>
             <div className="text-lg sm:text-xl md:text-2xl text-secondary font-mono mb-4 md:mb-6">
-              Blockchain Engineer & Smart Contract Architect
+              Blockchain Engineer & Smart Contract Developer
             </div>
             <p className="text-sm md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Explore my journey through the blockchain ecosystem. Each block below represents 
